@@ -1,0 +1,13 @@
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\bin\ProjEstacionamento.dll.config
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\bin\ProjEstacionamento.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\bin\ProjEstacionamento.pdb
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\bin\EntityFramework.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\bin\EntityFramework.SqlServer.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\bin\EntityFramework.xml
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\bin\EntityFramework.SqlServer.xml
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\obj\Debug\ProjEstacionamento.csprojResolveAssemblyReference.cache
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\obj\Debug\ProjEstacionamento.csproj.CoreCompileInputs.cache
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\obj\Debug\ProjEstacionamento.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjEstacionamento\ProjEstacionamento\obj\Debug\ProjEstacionamento.pdb

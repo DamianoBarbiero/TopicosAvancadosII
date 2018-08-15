@@ -1,0 +1,13 @@
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\bin\ProjViagem.dll.config
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\bin\ProjViagem.dll
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\bin\ProjViagem.pdb
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\bin\EntityFramework.dll
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\bin\EntityFramework.SqlServer.dll
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\bin\EntityFramework.xml
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\bin\EntityFramework.SqlServer.xml
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\obj\Debug\ProjViagem.csprojResolveAssemblyReference.cache
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\obj\Debug\ProjViagem.csproj.CoreCompileInputs.cache
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\obj\Debug\ProjViagem.dll
+C:\Users\damia\source\repos\ProjViagem\ProjViagem\obj\Debug\ProjViagem.pdb

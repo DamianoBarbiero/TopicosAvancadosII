@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EstacionamentoDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TB_CARRO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="anofabric" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="anomodelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TB_ESTACIONAMENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dataentrada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datasaida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nomecliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="valor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="EstacionamentoDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_CARRO" EntityType="Self.TB_CARRO" />
+    <EntitySet Name="TB_ESTACIONAMENTO" EntityType="Self.TB_ESTACIONAMENTO" />
+  </EntityContainer>
+</Schema>
