@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProvaDBModelStoreContainer" CdmEntityContainer="ProvaDBEntities">
+    <EntitySetMapping Name="TB_PROVA">
+      <EntityTypeMapping TypeName="ProvaDBModel.TB_PROVA">
+        <MappingFragment StoreEntitySet="TB_PROVA">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="nota1" ColumnName="nota1" />
+          <ScalarProperty Name="nota2" ColumnName="nota2" />
+          <ScalarProperty Name="media" ColumnName="media" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

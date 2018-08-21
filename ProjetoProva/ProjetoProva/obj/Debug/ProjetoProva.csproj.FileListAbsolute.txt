@@ -1,0 +1,13 @@
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\bin\ProjetoProva.dll.config
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\bin\ProjetoProva.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\bin\ProjetoProva.pdb
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\bin\EntityFramework.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\bin\EntityFramework.SqlServer.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\bin\EntityFramework.xml
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\bin\EntityFramework.SqlServer.xml
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\obj\Debug\ProjetoProva.csprojResolveAssemblyReference.cache
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\obj\Debug\ProjetoProva.csproj.CoreCompileInputs.cache
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\obj\Debug\ProjetoProva.dll
+C:\Users\damia\Documents\Faculdade Logatti\Tópicos Avançados em Sistemas de Inf II - Andre\ProjetoProva\ProjetoProva\obj\Debug\ProjetoProva.pdb

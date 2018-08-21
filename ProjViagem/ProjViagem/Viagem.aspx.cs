@@ -52,11 +52,11 @@ namespace ProjViagem
             string valor = Request.QueryString["iditem"];
             int iditem = 0;
             TB_VIAGEM viagem = new TB_VIAGEM();
-            ViagemDBEntities contetViagem = new ViagemDBEntities();
+            ViagemDBEntities contextViagem = new ViagemDBEntities();
 
             if (!String.IsNullOrEmpty(valor)) {
                 iditem = Convert.ToInt32(valor);
-                viagem = contetViagem.TB_VIAGEM.First(c => c.id == iditem);
+                viagem = contextViagem.TB_VIAGEM.First(c => c.id == iditem);
 
                 txtDescricao.Text = viagem.descricao;
                 txtdata.Text = viagem.data.ToString();
