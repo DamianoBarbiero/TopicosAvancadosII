@@ -1,0 +1,94 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: #ECF0F1;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+h2 {
+    padding: 20px 0;
+}
+
+.lab {
+    background: #fff;
+    border: 1px solid #BDC3C7;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+.lab > .col > .data {
+    padding-bottom: 40px;
+}
+
+.add-lab {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    border: 4px dashed #BDC3C7;
+    padding: 20px;
+    color: #BDC3C7;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+    cursor: pointer;
+    display: block;
+}
+
+
+.add-lab:hover {
+    opacity: 1;
+    color: #BDC3C7;
+}
+
+.pd {
+    margin-bottom: 15px;
+}
+
+.form > .col {
+    background: #fff;
+    border: 1px solid #BDC3C7;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.form .form-control {
+    max-width: 100%;
+}
+
+.btn-save {
+    margin: 20px 0;
+}
+
+#errowrapper {
+    display: none;
+    padding: 10px 20px;
+    background: #ffcdcd;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #ab0101;
+}
+
+#errowrapper.visible {
+    display: block;
+}

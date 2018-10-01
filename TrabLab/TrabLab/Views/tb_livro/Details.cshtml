@@ -1,0 +1,82 @@
+﻿@model TrabLab.tb_livro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tb_livro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qtdComputadores)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qtdComputadores)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qtdAluno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qtdAluno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.projetor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.projetor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.software1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.software1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.software2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.software2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.software3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.software3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sistemaOperacional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sistemaOperacional)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

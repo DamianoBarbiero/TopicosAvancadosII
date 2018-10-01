@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TrabLab.tb_livro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <h2>Laboratórios</h2>
+    <div class="row">
+        @Html.ActionLink("Adicionar Lab", "Create", null, new { @class = "add-lab col col-md-12" })
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="row lab">
+            <div class="col col-md-12">
+                <div class="row data">
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayFor(modelItem => item.nome)</h4>
+                        <div class="data-block">
+                            <b>Maquinas:</b>
+                            <span>@Html.DisplayFor(model => item.qtdComputadores)</span>
+                        </div>
+                        <div class="data-block">
+                            <b>Limite de Alunos:</b>
+                            <span>@Html.DisplayFor(model => item.qtdAluno)</span>
+                        </div>
+                        <div class="data-block">
+                            <b>Projeto:</b>
+                            <span>@Html.DisplayFor(model => item.projetor)</span>
+                        </div>
+
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="data-block">
+                            <b>Sistema Operacional:</b>
+                            <span>@Html.DisplayFor(model => item.sistemaOperacional)</span>
+                        </div>
+                        <b>Softwares:</b>
+                        <ul>
+                            <li>@Html.DisplayFor(modelItem => item.software1)</li>
+                            <li>@Html.DisplayFor(modelItem => item.software2)</li>
+                            <li>@Html.DisplayFor(modelItem => item.software3)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pd">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-block btn-lg btn-primary" })
+                </div>
+                <div>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-block btn-lg btn-danger" })
+                </div>
+            </div>
+        </div>
+    }
+</div>

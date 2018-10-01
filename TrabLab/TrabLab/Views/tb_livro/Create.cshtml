@@ -1,0 +1,111 @@
+﻿@model TrabLab.tb_livro
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container">
+    <h2 class="text-center">Adicionar Laboratório</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div id="errowrapper"></div>
+        <div class="form row">
+            <div class="col col-md-8 offset-md-2">
+                <h5>Dados Base</h5>
+                <div class="form-group" id="nomegroup">
+                    @Html.EditorFor(model => model.nome, new { htmlAttributes = new { placeholder = "Nome", @class = "form-control" } })
+                </div>
+                <div class="form-group" id="pcqtd">
+                    @Html.EditorFor(model => model.qtdComputadores, new { htmlAttributes = new { placeholder = "Quantidade de Computador", @class = "form-control" } })
+                </div>
+                <div class="form-group" id="studentqtd">
+                    @Html.EditorFor(model => model.qtdAluno, new { htmlAttributes = new { placeholder = "Limite de Aluno", @class = "form-control" } })                    
+                </div>
+                <div class="form-group">
+                    <span>Projetor</span>
+                    @Html.EditorFor(model => model.projetor)
+                    
+                </div>
+                <h5>Computadores</h5>
+                <div class="form-group">
+                    @Html.EditorFor(model => model.sistemaOperacional, new { htmlAttributes = new { placeholder = "Sistema Operacional", @class = "form-control" } })
+                </div>
+                <div class="softg form-group">
+                    @Html.EditorFor(model => model.software1, new { htmlAttributes = new { placeholder = "Software 1", @class = "form-control" } })                    
+                </div>
+                <div class="softg form-group">
+                    @Html.EditorFor(model => model.software2, new { htmlAttributes = new { placeholder = "Software 2", @class = "form-control" } })
+                </div>
+                <div class="softg form-group">
+                    @Html.EditorFor(model => model.software3, new { htmlAttributes = new { placeholder = "Software 3", @class = "form-control" } })
+                </div>
+
+                <button class="btn-save btn btn-block btn-primary">Salvar</button>
+            </div>
+
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    let valid = false;
+    const erroWrapper = document.querySelector("#errowrapper");
+
+    function insertErrs(erros) {
+        erroWrapper.innerHTML = "";
+        erros.forEach((erro) => {
+            const span = document.createElement("div");
+            span.textContent = erro;
+            erroWrapper.appendChild(span);
+        });
+
+        erroWrapper.classList.add("visible");
+    }
+
+    function checkValidation() {
+        let erros = [];
+        const nome = document.querySelector('#nomegroup input').value;
+        const pcqtd = document.querySelector('#pcqtd input').value;
+        const studentqtd = document.querySelector('#studentqtd input').value;
+        const softs = document.querySelectorAll('.softg input');
+
+        if (nome.length < 3) {
+            erros.push("Nome deve ter mais de 3 letras");
+        }
+
+        if (pcqtd == "" ||parseInt(pcqtd) < 1) {
+            erros.push("Deve ter mais de um computador");
+        }
+
+        if (pcqtd == "" || parseInt(studentqtd) < 4) {
+            erros.push("Deve ter mais de quatro alunos");
+        }
+        
+        if (Array.from(softs).some(input => input.value == "")) {
+            erros.push("Informe todos os Softwares");
+        }
+
+        if (erros.length > 0) {
+            insertErrs(erros);
+            return false;
+        }
+
+        return true;
+    }
+
+    document.querySelector('form').onsubmit = function (e) {
+        if (!valid) {
+            e.preventDefault();
+            valid = checkValidation();
+
+            if (valid) {
+                this.submit();
+            }
+        }
+    }
+</script>
