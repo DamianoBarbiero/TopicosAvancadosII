@@ -80,6 +80,10 @@ h2 {
     margin: 20px 0;
 }
 
+.btn-block {
+    max-width: 100%;
+}
+
 #errowrapper {
     display: none;
     padding: 10px 20px;
