@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -45,8 +46,8 @@ namespace MvcControleJogo.Controllers
         // GET: ClienteJogo/Create
         public IActionResult Create()
         {
-            ViewData["Cliente"] = new SelectList(_context.Cliente.ToList(), "NomeCliente").Items;
-            ViewData["Jogos"] = new SelectList(_context.Jogos.ToList(), "NomeJogo").Items;
+            ViewData["Cliente"] = new SelectList(_context.Cliente.ToList(), "NomeClienteFK").Items;
+            ViewData["Jogos"] = new SelectList(_context.Jogos.ToList(), "NomeJogoFK").Items;
             return View();
         }
 
@@ -55,10 +56,19 @@ namespace MvcControleJogo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID, NomeClienteFK, NomeJogoFK")] ClienteJogo clienteJogo)
+        public async Task<IActionResult> Create([Bind("ID, NomeClienteFK, NomeJogoFK")] ClienteJogo clienteJogo, IFormCollection collection)
         {
+            int ncfkk = Convert.ToInt16(collection["NomeClienteFK"]);
+            int njfkk = Convert.ToInt16(collection["NomeJogoFK"]);
+
             if (ModelState.IsValid)
             {
+                var cl = await _context.Cliente.FindAsync(ncfkk);
+                clienteJogo.NomeClienteFK = cl; 
+
+                var jog = await _context.Jogos.FindAsync(njfkk);
+                clienteJogo.NomeJogoFK = jog; 
+
                 _context.Add(clienteJogo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

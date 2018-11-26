@@ -15,7 +15,25 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.NomeJogo)
-        </dd>        
+        </dd>    
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeCategoriaFK.NomeCategoria)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeCategoriaFK.NomeCategoria)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePlataformaFK.NomePlataforma)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomePlataformaFK.NomePlataforma)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DesenvolvedorFK.NomeEmpresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DesenvolvedorFK.NomeEmpresa)
+        </dd>    
         <dt>
             @Html.DisplayNameFor(model => model.AnoLanc)
         </dt>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -47,9 +48,9 @@ namespace MvcControleJogo.Controllers
         // GET: Jogos/Create
         public IActionResult Create()
         {
-            ViewData["Categoria"] = new SelectList(_context.Categoria.ToList(), "NomeCategoria").Items;
-            ViewData["Plataforma"] = new SelectList(_context.Plataforma.ToList(), "NomePlataforma").Items;
-            ViewData["Empresa"] = new SelectList(_context.Empresa.ToList(), "NomeEmpresa").Items;
+            ViewData["Categoria"] = new SelectList(_context.Categoria.ToList(), "NomeCategoriaFK").Items;
+            ViewData["Plataforma"] = new SelectList(_context.Plataforma.ToList(), "NomePlataformaFK").Items;
+            ViewData["Empresa"] = new SelectList(_context.Empresa.ToList(), "DesenvolvedorFK").Items;
             return View();
         }
 
@@ -58,20 +59,22 @@ namespace MvcControleJogo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID, NomeJogo, NomeCategoriaFK, NomePlataformaFK, DesenvolvedorFK, AnoLanc")] Jogos jogos)
+        public async Task<IActionResult> Create([Bind("ID, NomeJogo, NomeCategoriaFK, NomePlataformaFK, DesenvolvedorFK, AnoLanc")] Jogos jogos, IFormCollection collection)
         {
-            //string ncfk = Convert.ToString("NomeCategoriaFK");
-            //string npfk = Convert.ToString("NomePlataformaFK");
-            //string desenfk = Convert.ToString("DesenvolvedorFK");
+            int ncfk = Convert.ToInt16(collection["NomeCategoriaFK"]);
+            int npfk = Convert.ToInt16(collection["NomePlataformaFK"]);
+            int desenfk = Convert.ToInt16(collection["DesenvolvedorFK"]);
 
             if (ModelState.IsValid)
             {
-                //var cl = await _context.Categoria.FindAsync(ncfk);
-               // var cls = await _context.Plataforma.FindAsync(npfk);
-                //var cla = await _context.Empresa.FindAsync(desenfk);
-                //jogos.NomeCategoriaFK = cl;
-                //jogos.NomePlataformaFK = cls;
-               // jogos.DesenvolvedorFK = cla;
+                var cl = await _context.Categoria.FindAsync(ncfk);
+                jogos.NomeCategoriaFK = cl;
+
+                var cls = await _context.Plataforma.FindAsync(npfk);
+                jogos.NomePlataformaFK = cls;
+
+                var cla = await _context.Empresa.FindAsync(desenfk);                
+                jogos.DesenvolvedorFK = cla;
 
                 _context.Add(jogos);
                 await _context.SaveChangesAsync();

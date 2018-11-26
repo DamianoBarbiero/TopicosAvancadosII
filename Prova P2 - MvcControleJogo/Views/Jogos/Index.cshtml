@@ -16,13 +16,13 @@
                 @Html.DisplayNameFor(model => model.NomeJogo)
             </th>            
             <th>
-                @Html.DisplayNameFor(model => model.NomeCategoriaFK)
+                @Html.DisplayNameFor(model => model.NomeCategoriaFK.NomeCategoria)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NomePlataformaFK)
+                @Html.DisplayNameFor(model => model.NomePlataformaFK.NomePlataforma)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DesenvolvedorFK)
+                @Html.DisplayNameFor(model => model.DesenvolvedorFK.NomeEmpresa)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.AnoLanc)
@@ -37,13 +37,13 @@
                 @Html.DisplayFor(modelItem => item.NomeJogo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NomeCategoriaFK)
+                @Html.DisplayFor(modelItem => item.NomeCategoriaFK.NomeCategoria)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NomePlataformaFK)
+                @Html.DisplayFor(modelItem => item.NomePlataformaFK.NomePlataforma)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DesenvolvedorFK)
+                @Html.DisplayFor(modelItem => item.DesenvolvedorFK.NomeEmpresa)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AnoLanc)

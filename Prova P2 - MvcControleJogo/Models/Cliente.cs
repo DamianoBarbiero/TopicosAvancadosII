@@ -1,7 +1,9 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace MvcControleJogo.Models{
     public class Cliente {
+        [Key]
         public int ID{get; set;}
         public string NomeCliente{get; set;}
         public string Rg{get; set;}
