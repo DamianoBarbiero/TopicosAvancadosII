@@ -25,6 +25,7 @@
                 <div class="form-group">
                     <span>Projetor</span>
                     @Html.EditorFor(model => model.projetor)
+                    <div id="checkedMsg"> Para utilização do projetor é necessário abrir uma solicitação para o help desk </div>
                     
                 </div>
                 <h5>Computadores</h5>
@@ -55,6 +56,18 @@
 <script>
     let valid = false;
     const erroWrapper = document.querySelector("#errowrapper");
+
+    const projCheck = document.querySelector("#projetor");
+    const checkedMsg = document.querySelector("#checkedMsg");
+
+    projCheck.addEventListener("change", function () {
+        if (!projCheck.checked) {
+            checkedMsg.style.display = 'block';
+        } else {
+            checkedMsg.style.display = 'none';
+        }
+    })
+    
 
     function insertErrs(erros) {
         erroWrapper.innerHTML = "";

@@ -1,0 +1,55 @@
+@model MvcControleJogo.Models.Jogos
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Jogos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="NomeJogo" class="control-label"></label>
+                <input asp-for="NomeJogo" class="form-control" />
+                <span asp-validation-for="NomeJogo" class="text-danger"></span>
+            </div>            
+            <div class="form-group">
+                <label asp-for="NomeCategoriaFK" class="control-label"></label>
+                 @Html.DropDownListFor(model => model.NomeCategoriaFK, new SelectList(ViewBag.Categoria, "ID", "NomeCategoria"),"Selecione", new { @class = "form-control" })
+                <span asp-validation-for="NomeCategoriaFK" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="NomePlataformaFK" class="control-label"></label>
+                 @Html.DropDownListFor(model => model.NomePlataformaFK, new SelectList(ViewBag.Jogos, "ID", "NomePlataforma"),"Selecione", new { @class = "form-control" })
+                <span asp-validation-for="NomePlataformaFK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DesenvolvedorFK" class="control-label"></label>
+                 @Html.DropDownListFor(model => model.DesenvolvedorFK, new SelectList(ViewBag.Empresa, "ID", "NomeEmpresa"),"Selecione", new { @class = "form-control" })
+                <span asp-validation-for="DesenvolvedorFK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnoLanc" class="control-label"></label>
+                <input asp-for="AnoLanc" class="form-control" />
+                <span asp-validation-for="AnoLanc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
